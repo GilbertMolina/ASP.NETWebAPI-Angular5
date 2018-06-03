@@ -1,0 +1,41 @@
+<h2 style="text-align:center; margin-top:10px">List of Employees</h2>
+<hr>
+
+<div *ngIf="employeeService.employeeList.length == 0" class="block">
+  <div class="card border-info mb-3">
+    <div class="card-header"><h4>Information</h4></div>
+    <div class="card-body text-info">
+      <h5 class="card-title">There is not employees yet</h5>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="employeeService.employeeList.length > 0">
+  <table class="table table-sm table-bordered table-hover table-striped">
+    <thead style="text-align: center">
+      <tr>
+        <th>Full Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Code</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeService.employeeList">
+        <td>{{ employee.FirstName }} {{ employee.LastName }}</td>
+        <td>{{ employee.Position }}</td>
+        <td>{{ employee.Office }}</td>
+        <td>{{ employee.Code }}</td>
+        <td>
+          <a class="btn" (click)="editEmployee(employee)">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="btn text-danger" (click)="deleteEmployee(employee.Id)">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,6 @@
+C:\Users\Gilberth\Documents\Visual Studio 2017\Projects\ASP.NETWebAPI-Angular5\EmployeeDB\bin\Debug\EmployeeDB.dacpac
+C:\Users\Gilberth\Documents\Visual Studio 2017\Projects\ASP.NETWebAPI-Angular5\EmployeeDB\obj\Debug\EmployeeDB.dll
+C:\Users\Gilberth\Documents\Visual Studio 2017\Projects\ASP.NETWebAPI-Angular5\EmployeeDB\obj\Debug\EmployeeDB.pdb
+C:\Users\Gilberth\Documents\Visual Studio 2017\Projects\ASP.NETWebAPI-Angular5\EmployeeDB\bin\Debug\EmployeeDB.dll
+C:\Users\Gilberth\Documents\Visual Studio 2017\Projects\ASP.NETWebAPI-Angular5\EmployeeDB\bin\Debug\EmployeeDB.pdb
+C:\Users\Gilberth\Documents\Visual Studio 2017\Projects\ASP.NETWebAPI-Angular5\EmployeeDB\obj\Debug\EmployeeDB.sqlprojAssemblyReference.cache

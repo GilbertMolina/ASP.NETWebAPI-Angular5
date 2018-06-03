@@ -1,0 +1,48 @@
+<form class="emp-form" #employeeForm="ngForm" (ngSubmit)="submitForm(employeeForm)">
+  <h2 style="text-align:center">Employee</h2>
+  <hr>
+  <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="employeeService.selectedEmployee.Id">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="FirstName" #FirstName="ngModel" [(ngModel)]="employeeService.selectedEmployee.FirstName" placeholder="First Name" required>
+      <div class="validation-error" *ngIf="FirstName.invalid && FirstName.touched">The First Name is required.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="LastName" #LastName="ngModel" [(ngModel)]="employeeService.selectedEmployee.LastName" placeholder="Last Name" required>
+      <div class="validation-error" *ngIf="LastName.invalid && LastName.touched">The Last Name is required.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="Position" #Position="ngModel" [(ngModel)]="employeeService.selectedEmployee.Position" placeholder="Position" required>
+    <div class="validation-error" *ngIf="Position.invalid && Position.touched">The Position is required.</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Code" #Code="ngModel" [(ngModel)]="employeeService.selectedEmployee.Code" placeholder="Code" required>
+      <div class="validation-error" *ngIf="Code.invalid && Code.touched">The Code is required.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Office" #Office="ngModel" [(ngModel)]="employeeService.selectedEmployee.Office" placeholder="Office" required>
+      <div class="validation-error" *ngIf="Office.invalid && Office.touched">The Office is required.</div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+        <div *ngIf="employeeForm.value.Id == null">
+            <button [disabled]="!employeeForm.valid" type="submit" class="btn btn-lg btn-block btn-success">
+                <i class="fas fa-save"></i> Add
+            </button>
+          </div>
+          <div *ngIf="employeeForm.value.Id != null">
+              <button [disabled]="!employeeForm.valid" type="submit" class="btn btn-lg btn-block btn-warning">
+                  <i class="fas fa-save"></i> Edit
+              </button>
+          </div>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(employeeForm)">
+        <i class="fas fa-eraser"></i> Reset
+      </button>
+    </div>
+  </div>
+</form>
